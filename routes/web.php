@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::group(['prefix'=>'administrator', 'middleware' =>'auth'], function(){
+    Route::get('/home', 'HomeController@index')->name('home');
+    
+    Route::resource('about', 'AboutController')->except(['create','show']);
+});
+
