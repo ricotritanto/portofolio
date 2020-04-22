@@ -15,7 +15,8 @@
 	<link href="{{ asset('assets/backend/css/font-awesome.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('assets/backend/css/simple-line-icons.css') }}" rel="stylesheet">
 	<link href="{{ asset('assets/backend/css/style.css') }}" rel="stylesheet">
-	<link href="{{ asset('assets/backend/vendors/pace-progress/css/pace.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/backend/vendors/pace-progress/css/pace.min.css') }}" rel="stylesheet">
+    
 </head>
 <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
     @include('layouts.module.header')
@@ -42,7 +43,6 @@
             <a href="https://coreui.io">CoreUI</a>
         </div>
     </footer>
-    
     <script src="{{ asset('assets/backend/js/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/backend/js/popper.min.js') }}"></script>
     <script src="{{ asset('assets/backend/js/bootstrap.min.js') }}"></script>
@@ -53,3 +53,5 @@
     @yield('js')
 </body>
 </html>
+<script src="{{ asset('assets/datepicker/js/bootstrap-datepicker.min.js') }}"></script>
+<script src="{{ asset('assets/datepicker/bootstrap-datepicker.js') }}"></script>

@@ -59,6 +59,17 @@ Route::group(['prefix'=>'administrator', 'middleware' =>'auth'], function(){
         Route::put('/{$id}','EducationController@update')->name('education.update');    
     });
 
+    Route::resource('/experience', 'ExperienceController')->except([
+        'create', 'show']);   
+    Route::group(['prefix' => 'experience'], function()
+    {
+        Route::get('/','ExperienceController@index')->name('experience.index');
+        Route::get('/create','ExperienceController@create')->name('experience.create');
+        Route::post('/store','ExperienceController@store')->name('experience.store');
+        Route::delete('/{$id}','ExperienceController@destroy')->name('experience.destroy');
+        Route::get('/{$id}/edit','ExperienceController@edit')->name('experience.edit');
+        Route::put('/{$id}','ExperienceController@update')->name('experience.update');    
+    });
    
 });
 
