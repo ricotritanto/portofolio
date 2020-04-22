@@ -28,7 +28,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ route('experience.index')}}">
                 <i class="fa fa-plus-circle nav-icon"></i> Experience
             </a>
         </li>
