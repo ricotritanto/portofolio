@@ -29,6 +29,10 @@
                             <input class="form-control" id="name" name="name" type="text" placeholder="name" required >
                         </div>
                         <div class="form-group">
+                            <label for="vat">Title</label>
+                            <input class="form-control" id="title" name="title" type="text" placeholder="title" required >
+                        </div>
+                        <div class="form-group">
                             <label for="description">Description</label>                                  
                             <textarea name="description" id="description" class="form-control"></textarea>
                             <p class="text-danger">{{ $errors->first('description') }}</p>

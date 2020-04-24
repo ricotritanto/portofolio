@@ -43,6 +43,7 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Name</th>
+                                            <th>Title</th>
                                             <th>Description</th>                                       
                                             <th>Last Update</th>
                                             <th>Action</th>
@@ -54,6 +55,7 @@
                                         <tr>
                                             <td>{{$no++}}</td>
                                             <td>{{$row->name}}</td>
+                                            <td>{{$row->title}}</td>
                                             <td>{!!$row->description!!}</td>
                                             <td>{{$row->updated_at}}</td>
                                             <td>

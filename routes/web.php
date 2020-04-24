@@ -12,10 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//============================== FrontEnd ==========================================//
+Route::get('/', 'front\FrontController@index')->name('front.index');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+//============================= Backend ===========================================//
 
 Auth::routes();
 

@@ -22,11 +22,13 @@ class EducationController extends Controller
     {
         $this->validate($request, [
             'name' => 'string',
+            'title' => 'string',
             'description' => 'nullable|string',
 
         ]);
         $education = education::create([
                             'name' => $request->name,
+                            'title' => $request->title,
                             'description'=> $request->description]);
         return redirect(route('education.index'))->with(['success' => 'New education Added']);
     }
@@ -42,12 +44,14 @@ class EducationController extends Controller
     {
         $this->validate($request, [
             'name' => 'string',
+            'title' => 'string',
             'description' => 'nullable|string',
         ]);
 
         $education = education::find($id);
         $education->update([
             'name' => $request->name,
+            'title' => $request->title,
             'description'=> $request->description]);
         return redirect(route('education.index'))->with(['success' => 'Updated Success!!!']);
     }
