@@ -16,7 +16,7 @@ class CreateExperiencesTable extends Migration
         Schema::create('experiences', function (Blueprint $table) {
             $table->Increments('id');
             $table->string('name');
-            $table->string('description');
+            $table->text('description');
             $table->string('first_date');
             $table->string('last_date');
             $table->timestamps();
