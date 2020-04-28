@@ -71,7 +71,18 @@ Route::group(['prefix'=>'administrator', 'middleware' =>'auth'], function(){
         Route::get('/{$id}/edit','ExperienceController@edit')->name('experience.edit');
         Route::put('/{$id}','ExperienceController@update')->name('experience.update');    
     });
-   
+
+    Route::resource('/uploads', 'UploadController')->except([
+        'create', 'show']);   
+    Route::group(['prefix' => 'uploads'], function()
+    {
+        Route::get('/','UploadController@index')->name('uploads.index');
+        Route::get('/create','UploadController@create')->name('uploads.create');
+        Route::post('/store','UploadController@store')->name('uploads.store');
+        Route::delete('/{$id}','UploadController@destroy')->name('uploads.destroy');
+        Route::get('/{$id}/edit','UploadController@edit')->name('uploads.edit');
+        Route::put('/{$id}','UploadController@update')->name('uploads.update');    
+    });
 });
 
 
