@@ -54,7 +54,12 @@
                                         <tr>
                                             <td>{{$no++}}</td>
                                             <td>{{$row->name}}</td>
-                                            <td>{{$row->cv}}</td>
+                                            <td>
+                                            <form action="{{route('uploads.show', $row->id) }}" method="get">
+                                            @csrf
+                                                <a href="{{route('uploads.show', $row->id)}}" data-target="#product"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> lihat</a>
+                                             </form>
+                                             </td>
                                             <td>{{$row->updated_at}}</td>
                                             <td>
                                                 <!-- FORM UNTUK MENGHAPUS DATA PRODUK -->
@@ -76,7 +81,6 @@
                                     Halaman : {{ $uploads->currentPage() }} <br/>
                                     Jumlah Data : {{ $uploads->total() }} 
                             </div>
-                            <!-- MEMBUAT LINK PAGINASI JIKA ADA -->
                             {!! $uploads->links() !!}
                         </div>
                     </div>

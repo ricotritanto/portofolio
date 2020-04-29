@@ -73,7 +73,7 @@ Route::group(['prefix'=>'administrator', 'middleware' =>'auth'], function(){
     });
 
     Route::resource('/uploads', 'UploadController')->except([
-        'create', 'show']);   
+        'create']);   
     Route::group(['prefix' => 'uploads'], function()
     {
         Route::get('/','UploadController@index')->name('uploads.index');
@@ -81,7 +81,8 @@ Route::group(['prefix'=>'administrator', 'middleware' =>'auth'], function(){
         Route::post('/store','UploadController@store')->name('uploads.store');
         Route::delete('/{$id}','UploadController@destroy')->name('uploads.destroy');
         Route::get('/{$id}/edit','UploadController@edit')->name('uploads.edit');
-        Route::put('/{$id}','UploadController@update')->name('uploads.update');    
+        Route::put('/{$id}','UploadController@update')->name('uploads.update');  
+        Route::get('/{$id','UploadController@show')->name('uploads.show');    
     });
 });
 
