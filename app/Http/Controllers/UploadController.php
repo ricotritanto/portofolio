@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Response;
 use File;
 use App\Cv;
+use PDF;
 
 class UploadController extends Controller
 {
@@ -17,7 +19,7 @@ class UploadController extends Controller
 
     public function create()
     {
-        return view('upload');
+        return view('uploads.upload');
 
     }
 
@@ -44,5 +46,14 @@ class UploadController extends Controller
     public function destroy($id)
     {
 
+    }
+
+    public function show($id)
+    {
+        $uploads = cv::find($id);
+        $filename = "15881374481.pdf";
+        $path = storage_path($filename);
+
+        return PDF::loadFile(public_path().'/15881374481.pdf')->save('/path-to/15881374481.pdf')->stream('15881374481.pdf');
     }
 }
