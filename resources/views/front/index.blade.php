@@ -5,9 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Rico Tritanto</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
+	<meta name="description" content="rico tritanto" />
+	<meta name="keywords" content="rico tritanto, it support, web programming, engineer, software engineer" />
+	<meta name="author" content="rico tritanto" />
 
   <!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
@@ -56,7 +56,7 @@
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
 		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
 			<div class="text-center">
-				<div class="author-img" style="background-image: url(images/about.jpg);"></div>
+				<div class="author-img" style="background-image: url(assets/front/images/pas_foto.jpg);"></div>
 				<h1 id="colorlib-logo"><a href="index.html">Rico Tritanto</a></h1>
 				<span class="position"><a href="#">Technical Support / Web Programming</a> <br>in Indonesia</span>
 			</div>
@@ -102,22 +102,24 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					   				<div class="slider-text-inner js-fullheight">
 					   					<div class="desc">
 						   					<h1>Hi! <br>I'm Rico</h1>
-												<p><a class="btn btn-primary btn-learn">Download CV <i class="icon-download4"></i></a></p>
+												<p><a href="{{route('front.download') }}" class="btn btn-primary btn-learn">Download CV <i class="icon-download4"></i></a></p>
 											</div>
 					   				</div>
 					   			</div>
 					   		</div>
 				   		</div>
 				   	</li>
-				   	<li style="background-image: url(assets/front/images/img_bg_2.jpg);">
+				   	<li style="background-image: url(assets/front/images/ts.jpg);">
 				   		<div class="overlay"></div>
 				   		<div class="container-fluid">
 				   			<div class="row">
 					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
 					   				<div class="slider-text-inner">
 					   					<div class="desc">
-						   					<h1>I am <br>a Technical Support & Web Programming</h1>												
-												<p><a class="btn btn-primary btn-learn">View Portfolio <i class="icon-briefcase3"></i></a></p>
+						   					<h1><font color=" #f4d03f ">I am <br>a Technical Support & Web Programming</font></h1>												
+												<p><a class="btn btn-primary btn-learn">
+												<font color="#0000FF">View Portfolio</font> 
+												<i class="icon-briefcase3"></i></a></p>
 											</div>
 					   				</div>
 					   			</div>
@@ -449,10 +451,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 						<div class="col-md-5">
 							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
 								<div class="colorlib-icon">
-									<i class="icon-globe-outline"></i>
+									<i class="icon-linkedin2"></i>
 								</div>
 								<div class="colorlib-text">
-									<p><a href="#">info@domain.com</a></p>
+									<p><a href="https://www.linkedin.com/in/rico-tritanto-8382b493/">Linkedin</a></p>
 								</div>
 							</div>
 

@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 //============================== FrontEnd ==========================================//
 Route::get('/', 'front\FrontController@index')->name('front.index');
+Route::get('/download', 'front\FrontController@download_cv')->name('front.download');
 
 
 //============================= Backend ===========================================//
