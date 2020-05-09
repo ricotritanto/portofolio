@@ -69,8 +69,8 @@
 						<li><a href="#" data-nav-section="skills">Skills</a></li>
 						<li><a href="#" data-nav-section="education">Education</a></li>
 						<li><a href="#" data-nav-section="experience">Experience</a></li>
-						<!-- <li><a href="#" data-nav-section="work">Work</a></li>
-						<li><a href="#" data-nav-section="blog">Blog</a></li> -->
+						<!-- <li><a href="#" data-nav-section="work">Work</a></li> -->
+						<!-- <li><a href="https://masjackdotcom.wordpress.com">Blog</a></li> -->
 						<li><a href="#" data-nav-section="contact">Contact</a></li>
 					</ul>
 				</div>
@@ -117,8 +117,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					   				<div class="slider-text-inner">
 					   					<div class="desc">
 						   					<h1><font color=" #f4d03f ">I am <br>a Technical Support & Web Programming</font></h1>												
-												<p><a class="btn btn-primary btn-learn">
-												<font color="#0000FF">View Portfolio</font> 
+												<p><a href="https://masjackdotcom.wordpress.com" class="btn btn-primary btn-learn">
+												<b><font color="#f60101" size="14">View MyBlog</font></b> 
 												<i class="icon-briefcase3"></i></a></p>
 											</div>
 					   				</div>
@@ -139,7 +139,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									<div class="about-desc">
 										<span class="heading-meta">About Us</span>
 										<h2 class="colorlib-heading">Who Am I?</h2>
-										<p><strong>Hi I'm Rico Tritanto</strong> {!!$about->description!!}</p>
+										<p><strong>Hi I'm Rico Tritanto</strong>,<br> {!!$about->description!!}</p>
 									</div>
 								</div>
 							</div>
