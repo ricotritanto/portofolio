@@ -43,8 +43,7 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Name</th>
-                                            <th>Description</th>
-                                            <th>Years</th>                                       
+                                            <th>Description</th>                             
                                             <th>Last Update</th>
                                             <th>Action</th>
                                         </tr>
@@ -56,7 +55,6 @@
                                             <td>{{$no++}}</td>
                                             <td>{{$row->name}}</td>
                                             <td>{!!$row->description!!}</td>
-                                            <td>{{$row->first_date}}   <i><b>sd</b></i>   {{$row->last_date}} </td>
                                             <td>{{$row->updated_at}}</td>
                                             <td>
                                                 <!-- FORM UNTUK MENGHAPUS DATA PRODUK -->

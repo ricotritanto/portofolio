@@ -17,8 +17,6 @@ class CreateExperiencesTable extends Migration
             $table->Increments('id');
             $table->string('name');
             $table->text('description');
-            $table->string('first_date');
-            $table->string('last_date');
             $table->timestamps();
         });
     }

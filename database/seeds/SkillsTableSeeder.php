@@ -12,9 +12,23 @@ class SkillsTableSeeder extends Seeder
      */
     public function run()
     {
-        skills::create([
+        DB::table('skills')->insert([
+            [
                 'name' => 'php',
-                'progress' => '90'
+                'progress' => '80'
+            ],
+            [
+                'name' => 'MySql',
+                'progress' => '80'
+            ],
+            [
+                'name' => 'CodeIgniter',
+                'progress' => '70'
+            ],
+            [
+                'name' => 'Laravel',
+                'progress' => '70'
+            ]
         ]);
     }
 }

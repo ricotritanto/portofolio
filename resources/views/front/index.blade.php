@@ -70,7 +70,7 @@
 						<li><a href="#" data-nav-section="education">Education</a></li>
 						<li><a href="#" data-nav-section="experience">Experience</a></li>
 						<!-- <li><a href="#" data-nav-section="work">Work</a></li> -->
-						<!-- <li><a href="https://masjackdotcom.wordpress.com">Blog</a></li> -->
+						<!-- <li><a href="https://masjackdotcom.wordpress.com" target="_blank">Blog</a></li> -->
 						<li><a href="#" data-nav-section="contact">Contact</a></li>
 					</ul>
 				</div>
@@ -79,7 +79,7 @@
 			<div class="colorlib-footer">
 				<p><small>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span> <span>Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash.com</a></span></small></p>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span> 
 				<ul>
 					<li><a href="#"><i class="icon-facebook2"></i></a></li>
 					<li><a href="#"><i class="icon-twitter2"></i></a></li>
@@ -116,9 +116,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
 					   				<div class="slider-text-inner">
 					   					<div class="desc">
-						   					<h1><font color=" #f4d03f ">I am <br>a Technical Support & Web Programming</font></h1>												
-												<p><a href="https://masjackdotcom.wordpress.com" class="btn btn-primary btn-learn">
-												<b><font color="#f60101" size="14">View MyBlog</font></b> 
+						   					<h1>I am <br>a Technical Support & Web Programming</h1>												
+												<p><a href="https://masjackdotcom.wordpress.com" target="_blank" class="btn btn-primary btn-learn">
+												<b>View MyBlog</b> 
 												<i class="icon-briefcase3"></i></a></p>
 											</div>
 					   				</div>
@@ -142,33 +142,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 										<p><strong>Hi I'm Rico Tritanto</strong>,<br> {!!$about->description!!}</p>
 									</div>
 								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
-									<div class="services color-1">
-										<span class="icon2"><i class="icon-bulb"></i></span>
-										<h3>Hardware </h3>
-									</div>
-								</div>
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
-									<div class="services color-2">
-										<span class="icon2"><i class="icon-globe-outline"></i></span>
-										<h3>Web Design</h3>
-									</div>
-								</div>
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
-									<div class="services color-3">
-										<span class="icon2"><i class="icon-data"></i></span>
-										<h3>Software</h3>
-									</div>
-								</div>
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
-									<div class="services color-4">
-										<span class="icon2"><i class="icon-phone3"></i></span>
-										<h3>Application</h3>
-									</div>
-								</div>
-							</div>							
+							</div>						
 						</div>
 					</div>
 				</div>
@@ -185,72 +159,42 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 						</div>
 					</div>
 					<div class="row row-pt-md">
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-1">
-								<span class="icon">
-									<i class="icon-bulb"></i>
-								</span>
-								<div class="desc">
-									<h3>Innovative Ideas</h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-								</div>
-							</div>
-						</div>
+						
 						<div class="col-md-4 text-center animate-box">
 							<div class="services color-2">
 								<span class="icon">
-									<i class="icon-data"></i>
+									<i class="icon-settings"></i>
 								</span>
 								<div class="desc">
-									<h3>Software</h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+									<h3>Software & Hardware</h3>
+									<p>Problem solving hardware & software, such as replacement of damaged computer components</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-4 text-center animate-box">
 							<div class="services color-3">
 								<span class="icon">
-									<i class="icon-phone3"></i>
+									<i class="icon-stackoverflow"></i>
 								</span>
 								<div class="desc">
-									<h3>Application</h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+									<h3>Build Website</h3>
+									<p>It is a website about my illustration works. The website is built with laravel framework.</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-4">
-								<span class="icon">
-									<i class="icon-layers2"></i>
-								</span>
-								<div class="desc">
-									<h3>Graphic Design</h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-								</div>
-							</div>
-						</div>
+						
 						<div class="col-md-4 text-center animate-box">
 							<div class="services color-5">
 								<span class="icon">
-									<i class="icon-data"></i>
+									<i class="icon-wi-fi"></i>
 								</span>
 								<div class="desc">
-									<h3>Software</h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+									<h3>Networking</h3>
+									<p>I can do a simple proxy configuration. Set up router and Alcatel so the server can connect</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-6">
-								<span class="icon">
-									<i class="icon-phone3"></i>
-								</span>
-								<div class="desc">
-									<h3>Application</h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-								</div>
-							</div>
-						</div>
+						
 					</div>
 				</div>
 			</section>
@@ -267,7 +211,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					</div>
 					<div class="row">
 						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+							<p>I am always interested in technological developments. For that reason, I always learn to add to my skills so they don't get left behind by technological developments.</p>
 						</div>
 						@foreach($skills as $row)
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
@@ -340,7 +284,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					               </div>
 
 					               <div class="timeline-label">
-					                  <h2><a href="#">{{$ex->name}}</a> <span>{{$ex->first_date}}-{{$ex->last_date}}</span></h2>
+					                  <h2><a href="#">{{$ex->name}}</a></h2>
 					                  <p>{!! $ex->description!!}.</p>
 					               </div>
 					            </div>
@@ -352,7 +296,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 				</div>
 			</section>
 
-			<section class="colorlib-work" data-section="work">
+			<!-- <section class="colorlib-work" data-section="work">
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
@@ -389,7 +333,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 
 			<!-- <section class="colorlib-blog" data-section="blog">
 				<div class="colorlib-narrow-content">
@@ -454,22 +398,21 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									<i class="icon-linkedin2"></i>
 								</div>
 								<div class="colorlib-text">
-									<p><a href="https://www.linkedin.com/in/rico-tritanto-8382b493/">Linkedin</a></p>
+									<p><a href="https://www.linkedin.com/in/rico-tritanto-8382b493/" target="_blank">Linkedin</a></p>
 								</div>
 							</div>
-
 							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
 								<div class="colorlib-icon">
-									<i class="icon-map"></i>
+									<i class="icon-github"></i>
 								</div>
 								<div class="colorlib-text">
-									<p>Jalan WR.Supratman Gang IX No 271 Kel.GisikDrono, Semarang Barat</p>
+									<p><a href="https://github.com/ricotritanto/" target="_blanks">Github</a></p>
 								</div>
 							</div>
 
 							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
 								<div class="colorlib-icon">
-									<i class="icon-phone"></i>
+									<i class="icon-whatsapp"></i>
 								</div>
 								<div class="colorlib-text">
 									<p><a href="tel://">+65 85 64 123 21 33</a></p>

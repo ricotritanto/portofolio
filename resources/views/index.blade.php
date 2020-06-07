@@ -211,7 +211,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									<i class="icon-data"></i>
 								</span>
 								<div class="desc">
-									<h3>Software</h3>
+									<h3>Hardware & Software </h3>
 									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
 								</div>
 							</div>

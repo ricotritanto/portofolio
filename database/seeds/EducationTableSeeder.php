@@ -12,10 +12,27 @@ class EducationTableSeeder extends Seeder
      */
     public function run()
     {
-        Education::create([
-            'name' => 'Universitas Dian Nuswantoro',
-            'title' => 'Bachelor`s Degree, Technology Information, 2007 - 2011',
-            'description' =>'Description'
+        DB::table('education')->insert([
+            [
+                'name' => 'Universitas Dian Nuswantoro, 2007 - 2011',
+                'title' => 'Bachelor`s Degree, Technology Information',
+                'description' =>'Description'
+            ],
+            [
+                'name' => 'SMA Kesatrian 1 Semarang, 2004 - 2007',
+                'title' => 'Senior High School, Natural Sciences, ',
+                'description' =>'Description'
+            ],
+            [
+                'name' => 'SMP Kesatrian 2 Semarang, 2001 - 2004',
+                'title' => 'Junior high school,',
+                'description' =>'Description'
+            ],
+            [
+                'name' => 'SD SABAN 02 Gubug, 1995 - 2001',
+                'title' => 'Elementary School ',
+                'description' =>'Description'
+            ]
         ]);
     }
 }
