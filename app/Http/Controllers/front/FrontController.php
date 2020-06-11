@@ -12,6 +12,7 @@ use App\skills;
 use App\Experience;
 use App\Education;
 use App\Cv;
+use App\Messages;
 use PDF;
 use Response;
 use File;
@@ -39,5 +40,25 @@ class FrontController extends Controller
             'Content-Type' => 'application/pdf',
             'Content-Disposition' => 'inline; filename="'.$filename.'"'
         ]);
+    }
+
+    public function message(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'string|required',
+            'email' => 'string|required',
+            'subject' => 'string|required',
+            'description' => 'string|required',
+
+        ]);
+
+        $messages = Messages::create([
+                            'name' => $request->name,
+                            'email' => $request->email,
+                            'subject' => $request->subject,
+                            'description'=> $request->description]);
+     
+        return redirect(route('front.index'))->with('alert', 'Sending message success!!');
+
     }
 }

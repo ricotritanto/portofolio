@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 //============================== FrontEnd ==========================================//
 Route::get('/', 'front\FrontController@index')->name('front.index');
 Route::get('/download', 'front\FrontController@download_cv')->name('front.download');
-
+Route::post('/message', 'front\FrontController@message')->name('front.message');
 
 //============================= Backend ===========================================//
 
@@ -84,6 +84,18 @@ Route::group(['prefix'=>'administrator', 'middleware' =>'auth'], function(){
         Route::get('/{$id}/edit','UploadController@edit')->name('uploads.edit');
         Route::put('/{$id}','UploadController@update')->name('uploads.update');  
         Route::get('/{$id}','UploadController@show')->name('uploads.show');    
+    });
+
+    Route::resource('/message', 'MessageController')->except([
+        'create', 'show']);   
+    Route::group(['prefix' => 'message'], function()
+    {
+        Route::get('/','MessageController@index')->name('message.index');
+        Route::get('/create','MessageController@create')->name('message.create');
+        Route::post('/store','MessageController@store')->name('message.store');
+        Route::delete('/{$id}','MessageController@destroy')->name('message.destroy');
+        Route::get('/{$id}/reply','MessageController@reply')->name('message.reply');
+        Route::put('/{$id}','MessageController@update')->name('message.update');    
     });
 });
 

@@ -12,6 +12,13 @@
                 <i class="nav-icon icon-drop"></i> About
             </a>
         </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('message.index')}}">
+                <i class="fa fa-envelope nav-icon"></i> Messages
+            </a>
+        </li>
+
         <li class="nav-item">
             <a class="nav-link" href="{{ route('services.index')}}">
                 <i class="fa fa-user-plus nav-icon"></i> Services

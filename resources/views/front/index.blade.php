@@ -89,7 +89,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			</div>
 
 		</aside>
-
 		<div id="colorlib-main">
 			<section id="colorlib-hero" class="js-fullheight" data-section="home">
 				<div class="flexslider js-fullheight">
@@ -129,7 +128,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 				  	</ul>
 			  	</div>
 			</section>
-
+			
 			<section class="colorlib-about" data-section="about">
 				<div class="colorlib-narrow-content">
 					<div class="row">
@@ -147,9 +146,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					</div>
 				</div>
 			</section>
-
-
-			
+				
 			<section class="colorlib-services" data-section="services">
 				<div class="colorlib-narrow-content">
 					<div class="row">
@@ -382,7 +379,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					</div>
 				</div>
 			</section> -->
-
+		
 			<section class="colorlib-contact" data-section="contact">
 				<div class="colorlib-narrow-content">
 					<div class="row">
@@ -422,18 +419,19 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 						<div class="col-md-7 col-md-push-1">
 							<div class="row">
 								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
-									<form action="">
+									<form action="{{ route('front.message') }}" method="post">
+									@csrf
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Name">
+											<input type="text" class="form-control" name="name" placeholder="Name" required>
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Email">
+											<input type="text" class="form-control" name="email" placeholder="Email" required>
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Subject">
+											<input type="text" class="form-control" name="subject" placeholder="Subject" required>
 										</div>
 										<div class="form-group">
-											<textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+											<textarea name="description" id="description" cols="30" rows="7" class="form-control" required placeholder="Message"></textarea>
 										</div>
 										<div class="form-group">
 											<input type="submit" class="btn btn-primary btn-send-message" value="Send Message">
@@ -469,7 +467,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	
 	<!-- MAIN JS -->
 	<script src="{{ asset('assets/front/js/main.js')}}"></script>
-
+	<script>
+		var msg = '{{Session::get('alert')}}';
+		var exist = '{{Session::has('alert')}}';
+		if(exist){
+		alert(msg);
+		}
+  </script>
 	</body>
 </html>
 
