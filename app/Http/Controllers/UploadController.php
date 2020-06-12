@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 use Response;
 use File;
 use App\Cv;
@@ -27,7 +28,7 @@ class UploadController extends Controller
     {
         $this->validate($request,[
             'name' => 'required|string',
-            'cv' => 'required|mimes:pdf']);
+            'cv' => 'required|mimes:pdf|max:2048']);
          //jika filenya ada
          if($request->hasFile('cv')){
             $file = $request->file('cv'); // simpan sementara divariabel
@@ -51,9 +52,16 @@ class UploadController extends Controller
     public function show($id)
     {
         $uploads = cv::find($id);
-        $filename = "15881374481.pdf";
-        $path = storage_path($filename);
+        $vitae = $uploads->cv;
+        // print_r ($vitae);exit();
+        $path = storage_path('app'.'/'.'public'.'/'.'uploads'.'/'.$vitae);
 
-        return PDF::loadFile(public_path().'/15881374481.pdf')->save('/path-to/15881374481.pdf')->stream('15881374481.pdf');
+        return Response::make(file_get_contents($path), 200, [
+
+            'Content-Type'
+        => 'application/pdf',        
+        'Content-Disposition' => 'inline; filename="'.$vitae.'"'
+
+        ]);
     }
 }

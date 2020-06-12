@@ -82,7 +82,7 @@ Route::group(['prefix'=>'administrator', 'middleware' =>'auth'], function(){
         Route::delete('/{$id}','UploadController@destroy')->name('uploads.destroy');
         Route::get('/{$id}/edit','UploadController@edit')->name('uploads.edit');
         Route::put('/{$id}','UploadController@update')->name('uploads.update');  
-        Route::get('/{$id','UploadController@show')->name('uploads.show');    
+        Route::get('/{$id}','UploadController@show')->name('uploads.show');    
     });
 });
 
