@@ -23,16 +23,12 @@ class ExperienceController extends Controller
     {
         $this->validate($request, [
             'name' => 'string|required',
-            'description' => 'string|required',
-            'firstdate' => 'string|required',
-            'lastdate' => 'string|required',
+            'description' => 'string|required'
 
         ]);
         $experience = experience::create([
                             'name' => $request->name,
-                            'description'=> $request->description,
-                            'first_date'=> $request->firstdate,
-                            'last_date'=> $request->lastdate]);
+                            'description'=> $request->description]);
         return redirect(route('experience.index'))->with(['success' => 'New experience Added']);
     }
 
@@ -46,17 +42,13 @@ class ExperienceController extends Controller
     {
         $this->validate($request, [
             'name' => 'string|required',
-            'description' => 'string|required',
-            'firstdate' => 'string|required',
-            'lastdate' => 'string|required',
+            'description' => 'string|required'
 
         ]);
         $experience = experience::find($id);
         $experience->update([
                             'name' => $request->name,
-                            'description'=> $request->description,
-                            'first_date'=> $request->firstdate,
-                            'last_date'=> $request->lastdate]);
+                            'description'=> $request->description]);
         return redirect(route('experience.index'))->with(['success' => 'Update Success']);
     }
 

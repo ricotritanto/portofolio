@@ -46,12 +46,16 @@ class UploadController extends Controller
 
     public function destroy($id)
     {
+        $data = cv::find($id);
+        $data->delete();
+        return redirect(route('uploads.index'))->with(['success' => 'Delete Success!!!']);
 
     }
 
     public function show($id)
     {
         $uploads = cv::find($id);
+<<<<<<< HEAD
         $vitae = $uploads->cv;
         // print_r ($vitae);exit();
         $path = storage_path('app'.'/'.'public'.'/'.'uploads'.'/'.$vitae);
@@ -62,6 +66,45 @@ class UploadController extends Controller
         => 'application/pdf',        
         'Content-Disposition' => 'inline; filename="'.$vitae.'"'
 
+=======
+        // $filename = $uploads['cv'];
+        $filename = $uploads['cv'];
+        // print_r($filename);exit();
+        $path = Storage_path('app/public/storage/'.$filename);
+
+        return Response::make(file_get_contents($path), 200, [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'inline; filename="'.$filename.'"'
+>>>>>>> e3ed7c5db1e502210e721ca012699e17b66c9147
         ]);
     }
+
+    public function edit($id)
+    {
+        $data = cv::find($id);
+        return view('uploads.edit', compact('data'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $this->validate($request,[
+            'name' => 'required|string',
+            'cv' => 'mimes:pdf']);
+        
+        $data = cv::find($id);
+        $filename = $data->cv;
+        if($request->hasFile('cv'))
+        {
+            $file = $request->file('cv'); // simpan sementara divariabel
+            $filename = time().$request->name.'.'. $file->getClientOriginalExtension();
+            $file->storeAs('public/uploads', $filename);
+            File::delete(storage_path('app/public/storage/' .$data->cv));
+        }
+            $data->update([
+                'name' => $request->name,
+                'cv' => $filename
+            ]);
+            return redirect(route ('uploads.index'))->with(['success'=> 'Update Success !']);
+    }
+
 }
