@@ -87,16 +87,11 @@ Route::group(['prefix'=>'administrator', 'middleware' =>'auth'], function(){
     });
 
     Route::resource('/message', 'MessageController')->except([
-        'create', 'show']);   
+        'reply']);   
     Route::group(['prefix' => 'message'], function()
     {
         Route::get('/','MessageController@index')->name('message.index');
-        Route::get('/create','MessageController@create')->name('message.create');
-        Route::post('/store','MessageController@store')->name('message.store');
-        Route::delete('/{$id}','MessageController@destroy')->name('message.destroy');
-        Route::get('/{$id}/reply','MessageController@reply')->name('message.reply');
-        Route::put('/{$id}','MessageController@update')->name('message.update');    
+        Route::get('/reply/{id}','MessageController@reply')->name('message.reply');  
     });
 });
-
 

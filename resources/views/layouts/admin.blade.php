@@ -4,9 +4,9 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<meta name="description" content="Daengweb - Aplikasi Ecommerce">
-	<meta name="author" content="Daengweb">
-  <meta name="keyword" content="aplikasi ecommerce laravel, tutorial laravel basic, belajar laravel, panduan belajar laravel">
+	<meta name="description" content="rico tritanto - Portfolio">
+	<meta name="author" content="Rico Tritanto">
+  <meta name="keyword" content="Rico tritanto laravel, It support, web programming, It Helpdesk">
     
   	
     @yield('title')
