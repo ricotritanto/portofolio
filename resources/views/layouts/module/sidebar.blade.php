@@ -15,7 +15,7 @@
 
         <li class="nav-item">
             <a class="nav-link" href="{{route('message.index')}}">
-                <i class="fa fa-envelope nav-icon"></i> Messages
+                <i class="fa fa-envelope nav-icon"></i> Mailbox
             </a>
         </li>
 

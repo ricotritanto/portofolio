@@ -57,11 +57,7 @@
                                             <td>
                                             <form action="{{route('uploads.show', $row->id) }}" method="get">
                                             @csrf
-<<<<<<< HEAD
-                                            <a href="{{ route('uploads.show', $row->id) }}" class="btn btn-success btn-sm">lihat</a>
-=======
                                             <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">view</button>
->>>>>>> e3ed7c5db1e502210e721ca012699e17b66c9147
                                                     <!-- <button class="btn btn-danger btn-sm">Lihat</button> -->
                                              </form>
                                              </td>
@@ -112,11 +108,7 @@
             </div>
             <div class="modal-body">
 
-<<<<<<< HEAD
-               <embed src="{{url::Storage('/uploads/'.$row->cv)}}"
-=======
                <embed src="{{asset('storage/uploads/' . $row->cv) }}"
->>>>>>> e3ed7c5db1e502210e721ca012699e17b66c9147
                type="application/pdf" frameborder="0" width="100%" height="1000Px"> 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

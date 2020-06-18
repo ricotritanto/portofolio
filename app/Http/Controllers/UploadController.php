@@ -55,18 +55,6 @@ class UploadController extends Controller
     public function show($id)
     {
         $uploads = cv::find($id);
-<<<<<<< HEAD
-        $vitae = $uploads->cv;
-        // print_r ($vitae);exit();
-        $path = storage_path('app'.'/'.'public'.'/'.'uploads'.'/'.$vitae);
-
-        return Response::make(file_get_contents($path), 200, [
-
-            'Content-Type'
-        => 'application/pdf',        
-        'Content-Disposition' => 'inline; filename="'.$vitae.'"'
-
-=======
         // $filename = $uploads['cv'];
         $filename = $uploads['cv'];
         // print_r($filename);exit();
@@ -75,7 +63,6 @@ class UploadController extends Controller
         return Response::make(file_get_contents($path), 200, [
             'Content-Type' => 'application/pdf',
             'Content-Disposition' => 'inline; filename="'.$filename.'"'
->>>>>>> e3ed7c5db1e502210e721ca012699e17b66c9147
         ]);
     }
 

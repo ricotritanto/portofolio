@@ -13,13 +13,29 @@
     <div class="container-fluid">
         <div class="animated fadeIn">
             <div class="row">
-                <div class="col-md-12">
+            <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Folder</h4>
+                        </div>
+                        <div class="card-body">
+                        <ul class="list-group">
+                            <a href="#"><li class="list-group-item fa fa-inbox"> Inbox</a></li>
+                            <a href="#"><li class="list-group-item fa fa-envelope-o"> Sent</a></li>
+                            <a href="#"><li class="list-group-item fa fa-trash-o"> Trash</a></li>
+                        </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title">
-                                List Messages
+                                Inbox
                             </h4>
                         </div>
+                       
                         <div class="card-body">
                             <!-- JIKA TERDAPAT FLASH SESSION, MAKA TAMPILAKAN -->
                             @if (session('success'))
@@ -29,32 +45,46 @@
                             @if (session('error'))
                                 <div class="alert alert-danger">{{ session('error') }}</div>
                             @endif
-                            <!-- JIKA TERDAPAT FLASH SESSION, MAKA TAMPILAKAN -->
-
-                            <!-- BUAT FORM UNTUK PENCARIAN, METHODNYA ADALAH GET -->
-                          
-                          
-                            <!-- TABLE UNTUK MENAMPILKAN DATA PRODUK -->
+                            <div class="box-body no-padding">
+                                <div class="mailbox-controls">
+                                    <!-- Check all button -->
+                                    <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="fa fa-square-o"></i>
+                                    </button>
+                                    <div class="btn-group">
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-trash-o"></i></button>
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-reply"></i></button>
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-share"></i></button>
+                                    </div>
+                                    <!-- /.btn-group -->
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
+                                    <div class="pull-right">
+                                    {{ $messages->currentPage() }}/{{ $messages->total() }}
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-left"></i></button>
+                                        <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-right"></i></button>
+                                    </div>
+                                    <!-- /.btn-group -->
+                                    </div>
+                                    <!-- /.pull-right -->
+                                </div>
+                            </div>
                             <div class="table-responsive">
-                                <table class="table table-hover table-bordered">
+                                <table class="table table-hover  border="0">
                                     <thead>
                                         <tr>
                                             <th>#</th>
                                             <th>Name</th>
-                                            <th>Email</th>
                                             <th>Subject</th>
-                                            <th>Description</th>                                       
-                                            <th>Last Update</th>
+                                            <th>Messages</th>                                       
+                                            <th>Update</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @php $no = 1; @endphp
                                         @forelse ($messages as $row)
                                         <tr>
-                                            <td>{{$no++}}</td>
-                                            <td>{{$row->name}}</td>
-                                            <td>{{$row->email}}</td>
+                                            <td><input type="checkbox"></td>
+                                            <td><a href="{{route('message.show', $row->id)}}">{{$row->name}}</td>
                                             <td>{{$row->subject}}</td>
                                             <td>{!!$row->description!!}</td>
                                             <td>{{$row->updated_at}}</td>
@@ -63,8 +93,7 @@
                                                 <form action="{{ route('message.destroy', $row->id) }}" method="post">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <a href="{{ route('message.reply', $row->id) }}" class="btn btn-warning btn-sm">Reply</a>
-                                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                                    <button class="btn fa fa-trash-o btn-sm"></button>
                                                 </form>
                                             </td>
                                         </tr>
@@ -75,11 +104,30 @@
                                         @endforelse
                                     </tbody>
                                 </table>
-                                    Halaman : {{ $messages->currentPage() }} <br/>
-                                    Jumlah Data : {{ $messages->total() }} 
                             </div>
-                            <!-- MEMBUAT LINK PAGINASI JIKA ADA -->
-                            {!! $messages->links() !!}
+                            <div class="box-body no-padding">
+                                <div class="mailbox-controls">
+                                    <!-- Check all button -->
+                                    <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="fa fa-square-o"></i>
+                                    </button>
+                                    <div class="btn-group">
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-trash-o"></i></button>
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-reply"></i></button>
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-share"></i></button>
+                                    </div>
+                                    <!-- /.btn-group -->
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
+                                    <div class="pull-right">
+                                    {{ $messages->currentPage() }}/{{ $messages->total() }}
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-left"></i></button>
+                                        <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-right"></i></button>
+                                    </div>
+                                    <!-- /.btn-group -->
+                                    </div>
+                                    <!-- /.pull-right -->
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
