@@ -28,7 +28,7 @@ class UploadController extends Controller
     {
         $this->validate($request,[
             'name' => 'required|string',
-            'cv' => 'required|mimes:pdf']);
+            'cv' => 'required|mimes:pdf|max:2048']);
          //jika filenya ada
          if($request->hasFile('cv')){
             $file = $request->file('cv'); // simpan sementara divariabel

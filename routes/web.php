@@ -91,7 +91,8 @@ Route::group(['prefix'=>'administrator', 'middleware' =>'auth'], function(){
     Route::group(['prefix' => 'message'], function()
     {
         Route::get('/','MessageController@index')->name('message.index');
-        Route::get('/reply/{id}','MessageController@reply')->name('message.reply');  
+        Route::get('/reply/{id}','MessageController@reply')->name('message.reply');
+        Route::get('/{$id}','MessageController@show')->name('message.show');  
     });
 });
 

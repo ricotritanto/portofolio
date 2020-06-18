@@ -48,7 +48,8 @@ class MessageController extends Controller
      */
     public function show($id)
     {
-
+        $messages = Messages::find($id);
+        return view('message.readmail', compact('messages'));
     }
 
     /**
