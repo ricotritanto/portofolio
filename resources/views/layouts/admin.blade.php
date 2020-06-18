@@ -35,7 +35,7 @@
 
     <footer class="app-footer">
         <div>
-            <a href="https://coreui.io">Amazing</a>
+            <a href="https://coreui.io">Masjackdotcom</a>
             <span>&copy; 2020 creativeLabs.</span>
         </div>
         <div class="ml-auto">

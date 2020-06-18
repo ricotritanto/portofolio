@@ -53,14 +53,14 @@
                                     </div>
                                     <div class="form-group">
                                         <i> From : {{$messages->email}} </i>
-                                        <span class="mailbox-read-time pull-right">{{$messages->updated_at(date('j F, Y h:i:s A'))}}</span>
+                                        <span class="mailbox-read-time pull-right">{{$messages->updated_at->format('j F, Y h:i:s A')}}</span>
                                     </div>
                                     <div class="mailbox-controls with-border text-center">
                                         <div class="btn-group">
                                         <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Delete">
                                             <i class="fa fa-trash-o"></i></button>
-                                        <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Reply">
-                                            <i class="fa fa-reply"></i></button>
+                                        <a href="{{route('message.reply', $messages->id)}}"><button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Reply">
+                                            <i class="fa fa-reply"></i></button></a>
                                         <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Forward">
                                             <i class="fa fa-share"></i></button>
                                         </div>
@@ -70,6 +70,14 @@
                                     </div>
                                     <div class="form-group">
                                         <p>{{$messages->description}}</p>
+                                    </div>
+                                    <div class="box-footer">
+                                        <div class="pull-right">
+                                            <button type="button" class="btn btn-default"><i class="fa fa-reply"></i> Reply</button>
+                                            <button type="button" class="btn btn-default"><i class="fa fa-share"></i> Forward</button>
+                                        </div>
+                                        <button type="button" class="btn btn-default"><i class="fa fa-trash-o"></i> Delete</button>
+                                        <button type="button" class="btn btn-default"><i class="fa fa-print"></i> Print</button>
                                     </div>
                                 </form>
                             </div>

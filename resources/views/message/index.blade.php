@@ -87,7 +87,7 @@
                                             <td><a href="{{route('message.show', $row->id)}}">{{$row->name}}</td>
                                             <td>{{$row->subject}}</td>
                                             <td>{!!$row->description!!}</td>
-                                            <td>{{$row->updated_at}}</td>
+                                            <td>{{$row->updated_at->format('j F, Y h:i:s A')}}</td>
                                             <td>
                                                 <!-- FORM UNTUK MENGHAPUS DATA PRODUK -->
                                                 <form action="{{ route('message.destroy', $row->id) }}" method="post">

@@ -92,7 +92,8 @@ Route::group(['prefix'=>'administrator', 'middleware' =>'auth'], function(){
     {
         Route::get('/','MessageController@index')->name('message.index');
         Route::get('/reply/{id}','MessageController@reply')->name('message.reply');
-        Route::get('/{$id}','MessageController@show')->name('message.show');  
+        Route::get('/{$id}','MessageController@show')->name('message.show');
+        Route::post('/send','MessageController@shsend')->name('message.send');  
     });
 });
 
