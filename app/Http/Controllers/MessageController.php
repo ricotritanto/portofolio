@@ -48,7 +48,7 @@ class MessageController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -59,7 +59,8 @@ class MessageController extends Controller
      */
     public function reply($id)
     {
-        //
+        $messages = Messages::find($id);
+        return view('message.reply', compact('messages'));
     }
 
     /**
