@@ -5,9 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Rico Tritanto</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
+	<meta name="description" content="rico tritanto" />
+	<meta name="keywords" content="rico tritanto, it support, web programming, engineer, software engineer" />
+	<meta name="author" content="rico tritanto" />
 
   <!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
@@ -56,7 +56,7 @@
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
 		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
 			<div class="text-center">
-				<div class="author-img" style="background-image: url(images/about.jpg);"></div>
+				<div class="author-img" style="background-image: url(assets/front/images/pas_foto.jpg);"></div>
 				<h1 id="colorlib-logo"><a href="index.html">Rico Tritanto</a></h1>
 				<span class="position"><a href="#">Technical Support / Web Programming</a> <br>in Indonesia</span>
 			</div>
@@ -69,8 +69,8 @@
 						<li><a href="#" data-nav-section="skills">Skills</a></li>
 						<li><a href="#" data-nav-section="education">Education</a></li>
 						<li><a href="#" data-nav-section="experience">Experience</a></li>
-						<!-- <li><a href="#" data-nav-section="work">Work</a></li>
-						<li><a href="#" data-nav-section="blog">Blog</a></li> -->
+						<!-- <li><a href="#" data-nav-section="work">Work</a></li> -->
+						<!-- <li><a href="https://masjackdotcom.wordpress.com" target="_blank">Blog</a></li> -->
 						<li><a href="#" data-nav-section="contact">Contact</a></li>
 					</ul>
 				</div>
@@ -79,7 +79,7 @@
 			<div class="colorlib-footer">
 				<p><small>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span> <span>Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash.com</a></span></small></p>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span> 
 				<ul>
 					<li><a href="#"><i class="icon-facebook2"></i></a></li>
 					<li><a href="#"><i class="icon-twitter2"></i></a></li>
@@ -89,7 +89,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			</div>
 
 		</aside>
-
 		<div id="colorlib-main">
 			<section id="colorlib-hero" class="js-fullheight" data-section="home">
 				<div class="flexslider js-fullheight">
@@ -102,14 +101,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					   				<div class="slider-text-inner js-fullheight">
 					   					<div class="desc">
 						   					<h1>Hi! <br>I'm Rico</h1>
-												<p><a class="btn btn-primary btn-learn">Download CV <i class="icon-download4"></i></a></p>
+												<p><a href="{{route('front.download') }}" class="btn btn-primary btn-learn">Download CV <i class="icon-download4"></i></a></p>
 											</div>
 					   				</div>
 					   			</div>
 					   		</div>
 				   		</div>
 				   	</li>
-				   	<li style="background-image: url(assets/front/images/img_bg_2.jpg);">
+				   	<li style="background-image: url(assets/front/images/ts.jpg);">
 				   		<div class="overlay"></div>
 				   		<div class="container-fluid">
 				   			<div class="row">
@@ -117,7 +116,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					   				<div class="slider-text-inner">
 					   					<div class="desc">
 						   					<h1>I am <br>a Technical Support & Web Programming</h1>												
-												<p><a class="btn btn-primary btn-learn">View Portfolio <i class="icon-briefcase3"></i></a></p>
+												<p><a href="https://masjackdotcom.wordpress.com" target="_blank" class="btn btn-primary btn-learn">
+												<b>View MyBlog</b> 
+												<i class="icon-briefcase3"></i></a></p>
 											</div>
 					   				</div>
 					   			</div>
@@ -127,7 +128,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 				  	</ul>
 			  	</div>
 			</section>
-
+			
 			<section class="colorlib-about" data-section="about">
 				<div class="colorlib-narrow-content">
 					<div class="row">
@@ -137,43 +138,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									<div class="about-desc">
 										<span class="heading-meta">About Us</span>
 										<h2 class="colorlib-heading">Who Am I?</h2>
-										<p><strong>Hi I'm Rico Tritanto</strong> {!!$about->description!!}</p>
+										<p><strong>Hi I'm Rico Tritanto</strong>,<br> {!!$about->description!!}</p>
 									</div>
 								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
-									<div class="services color-1">
-										<span class="icon2"><i class="icon-bulb"></i></span>
-										<h3>Hardware </h3>
-									</div>
-								</div>
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
-									<div class="services color-2">
-										<span class="icon2"><i class="icon-globe-outline"></i></span>
-										<h3>Web Design</h3>
-									</div>
-								</div>
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
-									<div class="services color-3">
-										<span class="icon2"><i class="icon-data"></i></span>
-										<h3>Software</h3>
-									</div>
-								</div>
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
-									<div class="services color-4">
-										<span class="icon2"><i class="icon-phone3"></i></span>
-										<h3>Application</h3>
-									</div>
-								</div>
-							</div>							
+							</div>						
 						</div>
 					</div>
 				</div>
 			</section>
-
-
-			
+				
 			<section class="colorlib-services" data-section="services">
 				<div class="colorlib-narrow-content">
 					<div class="row">
@@ -183,72 +156,42 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 						</div>
 					</div>
 					<div class="row row-pt-md">
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-1">
-								<span class="icon">
-									<i class="icon-bulb"></i>
-								</span>
-								<div class="desc">
-									<h3>Innovative Ideas</h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-								</div>
-							</div>
-						</div>
+						
 						<div class="col-md-4 text-center animate-box">
 							<div class="services color-2">
 								<span class="icon">
-									<i class="icon-data"></i>
+									<i class="icon-settings"></i>
 								</span>
 								<div class="desc">
-									<h3>Software</h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+									<h3>Software & Hardware</h3>
+									<p>Problem solving hardware & software, such as replacement of damaged computer components</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-4 text-center animate-box">
 							<div class="services color-3">
 								<span class="icon">
-									<i class="icon-phone3"></i>
+									<i class="icon-stackoverflow"></i>
 								</span>
 								<div class="desc">
-									<h3>Application</h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+									<h3>Build Website</h3>
+									<p>It is a website about my illustration works. The website is built with laravel framework.</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-4">
-								<span class="icon">
-									<i class="icon-layers2"></i>
-								</span>
-								<div class="desc">
-									<h3>Graphic Design</h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-								</div>
-							</div>
-						</div>
+						
 						<div class="col-md-4 text-center animate-box">
 							<div class="services color-5">
 								<span class="icon">
-									<i class="icon-data"></i>
+									<i class="icon-wi-fi"></i>
 								</span>
 								<div class="desc">
-									<h3>Software</h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+									<h3>Networking</h3>
+									<p>I can do a simple proxy configuration. Set up router and Alcatel so the server can connect</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-6">
-								<span class="icon">
-									<i class="icon-phone3"></i>
-								</span>
-								<div class="desc">
-									<h3>Application</h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-								</div>
-							</div>
-						</div>
+						
 					</div>
 				</div>
 			</section>
@@ -265,7 +208,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					</div>
 					<div class="row">
 						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+							<p>I am always interested in technological developments. For that reason, I always learn to add to my skills so they don't get left behind by technological developments.</p>
 						</div>
 						@foreach($skills as $row)
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
@@ -338,7 +281,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					               </div>
 
 					               <div class="timeline-label">
-					                  <h2><a href="#">{{$ex->name}}</a> <span>{{$ex->first_date}}-{{$ex->last_date}}</span></h2>
+					                  <h2><a href="#">{{$ex->name}}</a></h2>
 					                  <p>{!! $ex->description!!}.</p>
 					               </div>
 					            </div>
@@ -350,7 +293,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 				</div>
 			</section>
 
-			<section class="colorlib-work" data-section="work">
+			<!-- <section class="colorlib-work" data-section="work">
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
@@ -387,7 +330,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 
 			<!-- <section class="colorlib-blog" data-section="blog">
 				<div class="colorlib-narrow-content">
@@ -436,7 +379,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					</div>
 				</div>
 			</section> -->
-
+		
 			<section class="colorlib-contact" data-section="contact">
 				<div class="colorlib-narrow-content">
 					<div class="row">
@@ -449,25 +392,24 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 						<div class="col-md-5">
 							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
 								<div class="colorlib-icon">
-									<i class="icon-globe-outline"></i>
+									<i class="icon-linkedin2"></i>
 								</div>
 								<div class="colorlib-text">
-									<p><a href="#">info@domain.com</a></p>
+									<p><a href="https://www.linkedin.com/in/rico-tritanto-8382b493/" target="_blank">Linkedin</a></p>
+								</div>
+							</div>
+							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="colorlib-icon">
+									<i class="icon-github"></i>
+								</div>
+								<div class="colorlib-text">
+									<p><a href="https://github.com/ricotritanto/" target="_blanks">Github</a></p>
 								</div>
 							</div>
 
 							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
 								<div class="colorlib-icon">
-									<i class="icon-map"></i>
-								</div>
-								<div class="colorlib-text">
-									<p>Jalan WR.Supratman Gang IX No 271 Kel.GisikDrono, Semarang Barat</p>
-								</div>
-							</div>
-
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-phone"></i>
+									<i class="icon-whatsapp"></i>
 								</div>
 								<div class="colorlib-text">
 									<p><a href="tel://">+65 85 64 123 21 33</a></p>
@@ -477,18 +419,19 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 						<div class="col-md-7 col-md-push-1">
 							<div class="row">
 								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
-									<form action="">
+									<form action="{{ route('front.message') }}" method="post">
+									@csrf
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Name">
+											<input type="text" class="form-control" name="name" placeholder="Name" required>
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Email">
+											<input type="text" class="form-control" name="email" placeholder="Email" required>
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Subject">
+											<input type="text" class="form-control" name="subject" placeholder="Subject" required>
 										</div>
 										<div class="form-group">
-											<textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+											<textarea name="description" id="description" cols="30" rows="7" class="form-control" required placeholder="Message"></textarea>
 										</div>
 										<div class="form-group">
 											<input type="submit" class="btn btn-primary btn-send-message" value="Send Message">
@@ -524,7 +467,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	
 	<!-- MAIN JS -->
 	<script src="{{ asset('assets/front/js/main.js')}}"></script>
-
+	<script>
+		var msg = '{{Session::get('alert')}}';
+		var exist = '{{Session::has('alert')}}';
+		if(exist){
+		alert(msg);
+		}
+  </script>
 	</body>
 </html>
 

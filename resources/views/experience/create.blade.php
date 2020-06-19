@@ -34,24 +34,6 @@
                             <p class="text-danger">{{ $errors->first('description') }}</p>
                         </div>
                         <div class="form-group">
-                            <label for="name"><b>Date</b></label>
-                            <div class="input-group" >
-                                <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-                                </div>
-                                <input type="text" name="firstdate" class="form-control" id='date' required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="name"><b>Until</b></label>
-                            <div class="input-group" >
-                                <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-                                </div>
-                                <input type="text" name="lastdate" class="form-control" id='date2' required>
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <button class="btn btn-primary btn-sm">Add</button>
                         </div>
                     </div>
@@ -66,28 +48,6 @@
 <script type="text/javascript" src="{{ asset('js/jquery-3.3.1.js') }}"></script>
 <script src="{{ asset('assets/jQuery/jquery.3-3-1.min.js') }}"></script>
 <script src="{{ asset('assets/datepicker/bootstrap-datepicker.js')}}"></script>
-<script>
-  $(function () {
-   $( "#date" ).datepicker({
-    format: "dd-mm-yyyy",
-    weekStart: 0,
-    calendarWeeks: true,
-    autoclose: true,
-    todayHighlight: true,
-    rtl: true,
-    orientation: "auto"
-    });
-    $( "#date2").datepicker({
-    format: "dd-mm-yyyy",
-    weekStart: 0,
-    calendarWeeks: true,
-    autoclose: true,
-    todayHighlight: true,
-    rtl: true,
-    orientation: "auto"
-    });
-  })
-</script>
 @section('js')
     <!-- LOAD CKEDITOR -->
     <script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>

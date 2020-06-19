@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 //============================== FrontEnd ==========================================//
 Route::get('/', 'front\FrontController@index')->name('front.index');
-
+Route::get('/download', 'front\FrontController@download_cv')->name('front.download');
+Route::post('/message', 'front\FrontController@message')->name('front.message');
 
 //============================= Backend ===========================================//
 
@@ -71,7 +72,28 @@ Route::group(['prefix'=>'administrator', 'middleware' =>'auth'], function(){
         Route::get('/{$id}/edit','ExperienceController@edit')->name('experience.edit');
         Route::put('/{$id}','ExperienceController@update')->name('experience.update');    
     });
-   
-});
 
+    Route::resource('/uploads', 'UploadController')->except([
+        'create','show']);   
+    Route::group(['prefix' => 'uploads'], function()
+    {
+        Route::get('/','UploadController@index')->name('uploads.index');
+        Route::get('/create','UploadController@create')->name('uploads.create');
+        Route::post('/store','UploadController@store')->name('uploads.store');
+        Route::delete('/{$id}','UploadController@destroy')->name('uploads.destroy');
+        Route::get('/{$id}/edit','UploadController@edit')->name('uploads.edit');
+        Route::put('/{$id}','UploadController@update')->name('uploads.update');  
+        Route::get('/{$id}','UploadController@show')->name('uploads.show');    
+    });
+
+    Route::resource('/message', 'MessageController')->except([
+        'reply']);   
+    Route::group(['prefix' => 'message'], function()
+    {
+        Route::get('/','MessageController@index')->name('message.index');
+        Route::get('/reply/{id}','MessageController@reply')->name('message.reply');
+        Route::get('/{$id}','MessageController@show')->name('message.show');
+        Route::post('/send','MessageController@send')->name('message.send');  
+    });
+});
 
