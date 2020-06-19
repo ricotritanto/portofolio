@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Messages;
+use Mail;
 
 class MessageController extends Controller
 {
@@ -60,6 +61,19 @@ class MessageController extends Controller
 
     public function send(Request $request)
     {
+        try{
+            Mail::send('message.email',['email'=>$request->tomail, 'description'=>$request->description],
+                    function($message) use ($request)
+                    {
+                        $message->subject($request->subject);
+                        $message->from('masjackdotcom@gmail.com','masjackdotcom');
+                        $message->to($request->tomail);
+                    });
+                    return back()->with(['success' => 'Sending Email Success !!']);
+        }catch (Exception $e)
+        {
+            return response(['status' => false, 'errors' => $e->getMessage()]);
+        }
 
     }
     

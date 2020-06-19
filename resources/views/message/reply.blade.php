@@ -37,15 +37,22 @@
                         </div>
                        
                         <div class="card-body">
+                            @if (session('success'))
+                                <div class="alert alert-success">{{ session('success') }}</div>
+                            @endif
+
+                            @if (session('error'))
+                                <div class="alert alert-danger">{{ session('error') }}</div>
+                            @endif
                         <form action="{{ route('message.send') }}" method="post" enctype="multipart/form-data" >
                         @csrf
                             <div class="form-group">
                                 <label for="vat"><b>To: </b></label>
-                                <input class="form-control" placeholder="To:" value="{{$messages->email}}">
+                                <input class="form-control" name="tomail" placeholder="To:" value="{{$messages->email}}">
                             </div>
                             <div class="form-group">
                                 <label for="vat"><b>Subject:</b></label>
-                                <input class="form-control" value="Re: {{$messages->description}}">
+                                <input class="form-control" name="subject" value="Re: {{$messages->subject}}">
                             </div>
                             <div class="form-group">
                                 <textarea id="description" name="description" class="form-control" style="height: 300px" autofocus>
@@ -64,11 +71,10 @@
                                 </div>
                                 <p class="help-block">Max. 2Mb</p>
                             </div>
-                            </div>
-                            <!-- /.box-body -->
                             <div class="box-footer">
-                            <div class="pull-right">
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Send</button>
+                                <div class="pull-right">
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Send</button>
+                                </div>
                             </div>
                         </form>
                         <!-- /.box-footer -->
