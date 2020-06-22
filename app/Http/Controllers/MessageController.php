@@ -62,7 +62,7 @@ class MessageController extends Controller
     public function send(Request $request)
     {
         try{
-            Mail::send('message.email',['email'=>$request->tomail, 'description'=>$request->description],
+            Mail::send('message.email',['name'=>$request->name,'email'=>$request->tomail, 'description'=>$request->description],
                     function($message) use ($request)
                     {
                         $message->subject($request->subject);

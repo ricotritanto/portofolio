@@ -3,7 +3,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="#">
-        <img class="navbar-brand-full" src="" width="89" height="25" alt="Rico">
+        <img class="navbar-brand-full" src="{{asset('assets/backend/img/logo.jpg')}}" width="89" height="25" alt="Rico">
         <img class="navbar-brand-minimized" src="{{ asset('assets/backend/dw-01/img/brand/sygnet.svg') }}" width="30" height="30" alt="CoreUI Logo">
     </a>
     <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">

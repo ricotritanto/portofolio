@@ -49,6 +49,7 @@
                             <div class="form-group">
                                 <label for="vat"><b>To: </b></label>
                                 <input class="form-control" name="tomail" placeholder="To:" value="{{$messages->email}}">
+                                <input type="hidden" class="form-control" name="name" placeholder="To:" value="{{$messages->name}}">
                             </div>
                             <div class="form-group">
                                 <label for="vat"><b>Subject:</b></label>
@@ -57,11 +58,11 @@
                             <div class="form-group">
                                 <textarea id="description" name="description" class="form-control" style="height: 300px" autofocus>
                                     <br/><br/>
-                                    <hr />
-                                    <p><b> From: </b>{{$messages->email}} </p>
-                                    <p><b> Sent: </b>{{$messages->updated_at->format('l, j F, Y h:i:s A')}} </p>
-                                    <p><b> Subject: </b>{{$messages->subject}} </p>
-                                    <p>{{$messages->description}} </p>
+                                    <hr>
+                                    <b> From: </b>{{$messages->email}}<br/>
+                                    <b> Sent: </b>{{$messages->updated_at->format('l, j F, Y h:i:s A')}}<br/>
+                                    <b> Subject: </b>{{$messages->subject}} <br/><br/>
+                                    {{$messages->description}} <br/>
                                 </textarea>
                             </div>
                             <div class="form-group">

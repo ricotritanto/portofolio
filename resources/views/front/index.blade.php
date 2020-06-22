@@ -249,7 +249,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									    </div>
 									    <div id="collapse{{$key->id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{$key->id}}">
 									        <div class="panel-body">
-									            <p>Far far away, behind the word <strong>{{$key->name}}</strong>, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+									            <p>{!!$key->description!!}</p>
 									        </div>
 									    </div>
 									</div>
@@ -412,7 +412,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									<i class="icon-whatsapp"></i>
 								</div>
 								<div class="colorlib-text">
-									<p><a href="tel://">+65 85 64 123 21 33</a></p>
+									<p><a href="tel://">+62 85 64 123 21 33</a></p>
 								</div>
 							</div>
 						</div>
